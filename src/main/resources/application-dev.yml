@@ -1,0 +1,22 @@
+# ------------------
+# Profile: dev
+# ------------------
+# Default properties:
+# - PostgresSQL database
+
+spring:
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true  
+    hibernate:  
+      ddl-auto: update 
+    database-platform: org.hibernate.dialect.PostgreSQLDialect  
+  datasource:  
+    url: "jdbc:postgresql://localhost:5432/spring-angular"  
+    username: postgres  
+    password: root
